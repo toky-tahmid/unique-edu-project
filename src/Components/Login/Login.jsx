@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { AiOutlineGoogle } from "react-icons/ai";
 const Login = () => {
   return (
     <div>
@@ -29,9 +29,17 @@ const Login = () => {
             className="input input-bordered"
           />
         </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+        <div className=" text-center mt-6">
+          <button className="btn btn-primary px-9">Login</button>
         </div>
+        <div className='p-4 space-y-2 text-center'>
+                <h2 className="text-2xl font-medium "> Or Login With</h2>
+                <button className="btn btn-outline">
+                    <AiOutlineGoogle></AiOutlineGoogle>
+                    Google
+                </button>
+                
+            </div>
       </form>
       <p className="text-center mt-4">
         Do not have an account{" "}

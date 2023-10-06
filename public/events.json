@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Web Development Workshop",
+      "image": "https://res.cloudinary.com/tiigsi/image/upload/v1690991353/gtthwd7xuwfkkrlvhnd5.png",
+      "price": 50,
+      "short_description": "Learn the basics of web development in this hands-on workshop.",
+      "category": "Workshops"
+    },
+    {
+      "id": 2,
+      "name": "Virtual Career Fair 2023",
+      "image": "https://web.iit.edu/sites/web/files/field_uploads/events/images/2017/featured/virtual%20career%20fair%20%283%29.png",
+      "price": 60,
+      "short_description": "Explore job opportunities and network with leading companies online.",
+      "category": "Career Fairs"
+    },
+    {
+      "id": 3,
+      "name": "Educational Leadership",
+      "image": "https://internationalteacherstraining.com/blog/wp-content/uploads/2020/10/EL-1200x675-cropped.jpg",
+      "price": 75,
+      "short_description": "Enhance your leadership skills and network with educators.",
+      "category": "Educational Conferences"
+    },
+    {
+      "id": 4,
+      "name": "Data Science Training",
+      "image": "https://hh-certificates.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2022/01/24114755/pasted-image-0-2022-11-24T171742.851.jpg",
+      "price": 199,
+      "short_description": "Master data science with hands-on training and projects.",
+      "category": "Training Programs"
+    },
+    {
+      "id": 5,
+      "name": "Digital Marketing Webinar",
+      "image": "https://exposureninja.com/wp-content/uploads/2022/03/feature-digital-marketing-webinars-01.png",
+      "price": 80,
+      "short_description": "Get insights into digital marketing strategies in this webinar.",
+      "category": "Webinars"
+    },
+    {
+      "id": 6,
+      "name": "Robotics & Coding",
+      "image": "https://www.eduporium.com/wp/wp-content/uploads/2021/09/EW-Robotics-Tools-for-Teaching-Different-Coding-Languages-Blog-Banner-2.png",
+      "price": 100,
+      "short_description": "Explore the latest in STEM education and innovations.",
+      "category": "STEM Events"
+    }
+  ]
+  

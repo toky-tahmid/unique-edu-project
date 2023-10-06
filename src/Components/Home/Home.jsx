@@ -1,8 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+import Banner from "../Banner/Banner";
+import Cards from "../Card/Cards";
 
 const Home = () => {
+    const events = useLoaderData()
     return (
         <div>
-           <h1>This is Home</h1> 
+           <Banner></Banner>
+           <Cards events={events}></Cards>
+
         </div>
     );
 };
