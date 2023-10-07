@@ -1,51 +1,56 @@
 [
-    {
+  {
       "id": 1,
       "name": "Web Development Workshop",
       "image": "https://res.cloudinary.com/tiigsi/image/upload/v1690991353/gtthwd7xuwfkkrlvhnd5.png",
       "price": 50,
       "short_description": "Learn the basics of web development in this hands-on workshop.",
+      "long_description": "Join our Web Development Workshop to dive deep into the world of web development. This interactive session covers HTML, CSS, and JavaScript fundamentals, equipping you with essential skills to create stunning and responsive websites. Whether you're a beginner or looking to enhance your web development knowledge, this workshop is perfect for you. Get ready to code, design, and bring your web development ideas to life!",
       "category": "Workshops"
-    },
-    {
+  },
+  {
       "id": 2,
       "name": "Virtual Career Fair 2023",
       "image": "https://web.iit.edu/sites/web/files/field_uploads/events/images/2017/featured/virtual%20career%20fair%20%283%29.png",
       "price": 60,
       "short_description": "Explore job opportunities and network with leading companies online.",
+      "long_description": "Participate in our Virtual Career Fair 2023 and connect with a wide range of prospective employers from the comfort of your home. This event offers an excellent platform for job seekers to explore various career opportunities, interact with recruiters, and attend insightful seminars and workshops. Whether you're a recent graduate or a seasoned professional looking for a career change, this virtual career fair provides valuable networking opportunities and a chance to take the next step in your professional journey.",
       "category": "Career Fairs"
-    },
-    {
+  },
+  {
       "id": 3,
       "name": "Educational Leadership",
       "image": "https://internationalteacherstraining.com/blog/wp-content/uploads/2020/10/EL-1200x675-cropped.jpg",
       "price": 75,
       "short_description": "Enhance your leadership skills and network with educators.",
+      "long_description": "Our Educational Leadership conference is designed for educators and administrators aspiring to enhance their leadership skills in the field of education. Engage in thought-provoking sessions, panel discussions, and workshops led by experienced educational leaders. Gain valuable insights into effective leadership strategies, curriculum development, and fostering a positive learning environment. This event offers a unique opportunity to network with fellow educators, share best practices, and collaborate on innovative solutions to challenges in the education sector.",
       "category": "Educational Conferences"
-    },
-    {
+  },
+  {
       "id": 4,
       "name": "Data Science Training",
       "image": "https://hh-certificates.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2022/01/24114755/pasted-image-0-2022-11-24T171742.851.jpg",
       "price": 199,
       "short_description": "Master data science with hands-on training and projects.",
+      "long_description": "Immerse yourself in our Data Science Training program and acquire in-depth knowledge and practical skills in the field of data science. This comprehensive training includes hands-on exercises, real-world projects, and guidance from industry experts. Learn data analysis, machine learning, data visualization, and more. By the end of this program, you'll be proficient in using various data science tools and techniques to extract valuable insights from complex datasets. Whether you're a beginner or an experienced professional, this training program will empower you to excel in the rapidly evolving field of data science.",
       "category": "Training Programs"
-    },
-    {
+  },
+  {
       "id": 5,
       "name": "Digital Marketing Webinar",
       "image": "https://exposureninja.com/wp-content/uploads/2022/03/feature-digital-marketing-webinars-01.png",
       "price": 80,
       "short_description": "Get insights into digital marketing strategies in this webinar.",
+      "long_description": "Join our Digital Marketing Webinar to explore the latest trends and strategies in the ever-changing digital landscape. This informative session covers a wide range of topics, including search engine optimization (SEO), social media marketing, content marketing, and paid advertising. Gain valuable insights from industry experts, learn how to create effective digital marketing campaigns, and optimize your online presence. Whether you're a business owner, marketing professional, or aspiring digital marketer, this webinar will provide you with actionable tips and techniques to enhance your digital marketing efforts and drive measurable results.",
       "category": "Webinars"
-    },
-    {
+  },
+  {
       "id": 6,
       "name": "Robotics & Coding",
       "image": "https://www.eduporium.com/wp/wp-content/uploads/2021/09/EW-Robotics-Tools-for-Teaching-Different-Coding-Languages-Blog-Banner-2.png",
       "price": 100,
       "short_description": "Explore the latest in STEM education and innovations.",
+      "long_description": "Dive into the fascinating world of Robotics & Coding in our immersive event designed for students, educators, and technology enthusiasts. Discover cutting-edge technologies, learn coding languages, and participate in hands-on robotics activities. Engage with robotics experts, explore innovative projects, and gain insights into the future of STEM (Science, Technology, Engineering, and Mathematics) education. Whether you're a student passionate about robotics, an educator keen on integrating technology into the classroom, or a technology enthusiast interested in the latest innovations, this event offers a unique opportunity to expand your knowledge, creativity, and skills in the field of robotics and coding.",
       "category": "STEM Events"
-    }
-  ]
-  
+  }
+]
