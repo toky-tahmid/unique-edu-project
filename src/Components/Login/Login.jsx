@@ -1,52 +1,95 @@
-import { Link } from "react-router-dom";
-import { AiOutlineGoogle } from "react-icons/ai";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
+import React, { useState, useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 const Login = () => {
+  const { logInUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [error, setError] = useState(null);
+
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    logInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+
+      })
+      .catch((error) => {
+        setError("Invalid email or password. Please try again.");
+        console.error(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
-    <div>
-      <h2 className="text-3xl my-10 text-center">Please Login</h2>
-      <form  className=" md:w-3/4 lg:w-1/2 mx-auto">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input
-            type="email"
-            required
-            name="email"
-            placeholder="Email"
-            className="input input-bordered"
-          />
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input
-            type="password"
-            required
-            name="password"
-            placeholder="Password"
-            className="input input-bordered"
-          />
-        </div>
-        <div className=" text-center mt-6">
-          <button className="btn btn-primary px-9">Login</button>
-        </div>
-        <div className='p-4 space-y-2 text-center'>
-                <h2 className="text-2xl font-medium "> Or Login With</h2>
-                <button className="btn btn-outline">
-                    <AiOutlineGoogle></AiOutlineGoogle>
-                    Google
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card-body">
+            <form onSubmit={handleLogIn}>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  required
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  placeholder="password"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control mt-6">
+                <button className="btn btn-primary">Login</button>
+              </div>
+              {error && <p className="text-red-500 mt-2">{error}</p>} 
+            </form>
+            <p>
+              Don't Have An Account
+              <Link to="/register">
+                <button className="btn btn-link">Register</button>
+              </Link>
+              <p>
+                <button onClick={handleGoogleSignIn} className="btn btn-secondary ml-20">
+                  Google
                 </button>
-                
-            </div>
-      </form>
-      <p className="text-center mt-4">
-        Do not have an account{" "}
-        <Link className="text-blue-600 font-bold" to="/register">
-          Register
-        </Link>
-      </p>
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

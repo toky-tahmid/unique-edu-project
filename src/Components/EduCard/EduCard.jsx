@@ -3,11 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 const EduCard = () => {
   const { id } = useParams();
   const cards = useLoaderData();
-  const [eduCard, setEduCard] = useState(null); // Initialize with null
+  const [eduCard, setEduCard] = useState(null);
 
   useEffect(() => {
     if (Array.isArray(cards) && cards.length > 0) {

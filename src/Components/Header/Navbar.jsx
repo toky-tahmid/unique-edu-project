@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext)
+  const handleLogOut = () => {
+    logOut()
+    .then(()=>console.log('logged out'))
+    .catch(error => console.error(error))
+  }
   const navLinks = (
     <>
       <li>
@@ -8,21 +16,28 @@ const Navbar = () => {
           to="/"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "bg-orange-600 underline" : ""
-          }
-        >
+          }>
           {" "}
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/login"
+          to="/blog"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "bg-orange-600 underline" : ""
-          }
-        >
+          }>
           {" "}
-          Login
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-orange-500 underline" : ""
+          }>
+          Contact Us
         </NavLink>
       </li>
       <li>
@@ -30,18 +45,7 @@ const Navbar = () => {
           to="/login"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-orange-500 underline" : ""
-          }
-        >
-          Login
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-orange-500 underline" : ""
-          }
-        >
+          }>
           Login
         </NavLink>
       </li>
@@ -79,20 +83,16 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {/* <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                    <img src={userDefaultPic} />
-                </div>
-            </label> */}
-        {/* {
+        
+        {
                 user ?
-                    <button onClick={handleSignOut} className="btn">Sign Out</button>
+                    <button onClick={handleLogOut} className="btn">Sign Out</button>
                     :
-                    
-            } */}
-        <Link to="/login">
+                    <Link to="/login">
           <button className="btn">Login</button>
         </Link>
+             }
+        
       </div>
     </div>
   );

@@ -9,6 +9,10 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Error from "./Components/Error/Error";
 import EduCard from "./Components/EduCard/EduCard";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import Blog from "./Components/Blog/Blog";
+import AuthProvider from "./Provider/AuthProvider";
+import PrivateRoute from "./Private/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,12 +22,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./events.json"),
+        loader: () => fetch("/events.json"),
       },
       {
         path: "/eduCard/:id",
-        element:<EduCard></EduCard>,
-        loader: () => fetch("./events.json"),
+        element: <PrivateRoute><EduCard></EduCard></PrivateRoute>,
+        loader: () => fetch("/events.json"),
       },
       {
         path: "/login",
@@ -33,12 +37,22 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/contact",
+        element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
+      },
+      {
+        path: "/blog",
+        element: <PrivateRoute><Blog></Blog></PrivateRoute>
+      }
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
