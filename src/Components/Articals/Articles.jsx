@@ -14,11 +14,11 @@ const Articles = () => {
       <h1 className="text-3xl font-bold">Latest News & Articles</h1>
       <hr />
 
-      <div className=" md:flex-row ml-44 lg:flex justify-evenly mr-24 mt-10" data-aos="zoom-in">
+      <div className=" md:flex md:flex-row md:justify-evenly md:ml-4 lg:flex lg:flex-row lg:justify-evenly lg:mr-4 mt-10" data-aos="zoom-in">
         <div className="card w-96 glass">
           <figure>
-            <img
-              src="https://www.careeraddict.com/uploads/article/60200/free-online-courses.png"
+            <img className="h-56 w-full"
+              src="https://www.classcentral.com/report/wp-content/uploads/2022/02/Business-Writing-Courses-Banner.png"
               alt=""
             />
           </figure>

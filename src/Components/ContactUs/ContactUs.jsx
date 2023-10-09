@@ -9,7 +9,7 @@ const ContactUs = () => {
                 <br />
                 <hr />
             </div>
-            <div className="flex gap-4 mt-4">
+            <div className="md:flex-row lg:flex gap-4 mt-4">
                 <div className="w-72">
                     <label className="font-semibold">Full Name</label>
                     <input type="text" placeholder="Full Name" className="mt-1 p-2 w-full border rounded-md" />

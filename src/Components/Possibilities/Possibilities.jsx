@@ -10,7 +10,7 @@ const Possibilities = () => {
       <hr />
       <div className="md:flex-row lg:flex w-auto">
         <div className="mt-8">
-            <FaBook className=" ml-52 text-2xl"></FaBook>
+            <FaBook className="lg:ml-52 text-2xl"></FaBook>
           <h2 className="text-2xl font-semibold">Online Courses</h2>
           <h5 className="text-xl font-medium">
             Choose from hundreds of free training courses, pay to get
@@ -18,7 +18,7 @@ const Possibilities = () => {
           </h5>
         </div>
         <div className="mt-8">
-        <IoBulb className="ml-64 text-2xl"></IoBulb>
+        <IoBulb className=" lg:ml-64 text-2xl"></IoBulb>
           <h2 className="text-2xl font-semibold">Our Mission</h2>
           <p className="text-xl font-medium">
             Developing strong vision and mission statements can help
@@ -26,7 +26,7 @@ const Possibilities = () => {
           </p>
         </div>
         <div className="mt-8">
-            <GrAchievement className=" ml-64 text-2xl"></GrAchievement>
+            <GrAchievement className=" lg:ml-64 text-2xl"></GrAchievement>
           <h2 className="text-2xl font-semibold">Professional Certificate</h2>
           <p className="text-xl font-medium">
             Join the millions of students around the world who are already

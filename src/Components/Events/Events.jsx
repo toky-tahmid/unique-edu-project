@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 const Events = () => {
     useEffect(() => {
-        AOS.init({ duration: 2000 });
+        AOS.init({ duration: 1000 });
       }, [])
   return (
     <>
@@ -12,7 +12,7 @@ const Events = () => {
     <hr />
     <br />
       <div>
-      <div className="card card-side w-auto md:w-full lg:w-[80vh] ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-down" >
+      <div className="card card-side w-full md:w-2/3 lg:w-[80vh] mx-auto md:ml-0 lg:ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-down">
 
         <div className="card-body">
           <h2 className="card-title font-semibold text-2xl">
@@ -49,7 +49,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side w-auto md:w-full lg:w-[80vh] ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-left">
+      <div className="card card-side w-full md:w-2/3 lg:w-[80vh] mx-auto md:ml-0 lg:ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-down">
         
         <div className="card-body">
           <h2 className="card-title font-semibold text-2xl">
@@ -86,7 +86,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side w-auto md:w-full lg:w-[80vh] ml-96 bg-base-100 mb-4 shadow-2xl" data-aos="fade-right">
+      <div className="card card-side w-full md:w-2/3 lg:w-[80vh] mx-auto md:ml-0 lg:ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-down">
         
         <div className="card-body">
           <h2 className="card-title font-semibold text-xl">
@@ -123,7 +123,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side w-auto  md:w-full lg:w-[80vh] ml-96 bg-base-100 shadow-xl" data-aos="fade-up">
+      <div className="card card-side w-full md:w-2/3 lg:w-[80vh] mx-auto md:ml-0 lg:ml-96 bg-base-100 mb-4 shadow-xl" data-aos="fade-down">
         
         <div className="card-body">
           <h2 className="card-title font-semibold text-2xl">
