@@ -7,15 +7,14 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNFPwOm5wIMERUsNALIE_Pavxqmv9y0Sc",
-  authDomain: "milestone-nine-project.firebaseapp.com",
-  projectId: "milestone-nine-project",
-  storageBucket: "milestone-nine-project.appspot.com",
-  messagingSenderId: "968526172462",
-  appId: "1:968526172462:web:7bf30f3b321f271727aabf"
+  apiKey: "AIzaSyDXwwBxG0gO9Kq7Kef3_lK47Avb1VMSw5c",
+  authDomain: "unique-edu-project.firebaseapp.com",
+  projectId: "unique-edu-project",
+  storageBucket: "unique-edu-project.appspot.com",
+  messagingSenderId: "615804102562",
+  appId: "1:615804102562:web:2da0f3c72859b8eba674fb"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 export default auth;

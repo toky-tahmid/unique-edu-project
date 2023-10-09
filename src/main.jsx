@@ -10,9 +10,9 @@ import Register from "./Components/Register/Register";
 import Error from "./Components/Error/Error";
 import EduCard from "./Components/EduCard/EduCard";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import Blog from "./Components/Blog/Blog";
 import AuthProvider from "./Provider/AuthProvider";
 import PrivateRoute from "./Private/PrivateRoute";
+import Events from "./Components/Events/Events";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
         element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
       },
       {
-        path: "/blog",
-        element: <PrivateRoute><Blog></Blog></PrivateRoute>
+        path: "/events",
+        element: <PrivateRoute><Events></Events></PrivateRoute>
       }
     ],
   },

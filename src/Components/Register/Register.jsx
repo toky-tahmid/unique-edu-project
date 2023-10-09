@@ -4,34 +4,40 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, UpdateProfile } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const strongPasswordRegex = /^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+    const strongPasswordRegex =
+      /^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
     if (!strongPasswordRegex.test(password)) {
       setErrorMessage(
         "Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
       );
       return;
     }
-
-    try {
-      const result = await createUser(email, password);
-      console.log(result.user);
-      setSuccessMessage("Registered successfully!");
-      setErrorMessage("");
-    } catch (error) {
-      console.error("Registration failed:", error);
-      setErrorMessage("Registration failed.");
-      setSuccessMessage("");
-    }
+    createUser(email, password)
+      .then((res) => {
+        console.log(res);
+        UpdateProfile(name, photo)
+        .then(() => {
+          setSuccessMessage("Registered successfully!");
+          setErrorMessage("");
+          
+        });
+      })
+      .catch((error) => {
+        console.error("Registration failed:", error);
+        setErrorMessage("Registration failed.");
+        setSuccessMessage("");
+      });
   };
 
   return (
@@ -47,7 +53,7 @@ const Register = () => {
             <form onSubmit={handleRegister}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text font-semibold text-xl">Name</span>
                 </label>
                 <input
                   type="text"
@@ -59,7 +65,21 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="photo"
+                  placeholder="Photo URL"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text font-semibold text-xl">
+                    Email
+                  </span>
                 </label>
                 <input
                   type="email"
@@ -71,7 +91,9 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text font-semibold text-xl">
+                    Password
+                  </span>
                 </label>
                 <input
                   type="password"
@@ -86,7 +108,7 @@ const Register = () => {
               </div>
             </form>
             <p>
-              Already have an account?{" "}
+              Already have an account?
               <Link to="/login">
                 <button className="btn btn-link">Login</button>
               </Link>

@@ -14,7 +14,7 @@ const Articles = () => {
       <h1 className="text-3xl font-bold">Latest News & Articles</h1>
       <hr />
 
-      <div className="flex justify-evenly mt-10" data-aos="zoom-in">
+      <div className=" md:flex-row ml-44 lg:flex justify-evenly mr-24 mt-10" data-aos="zoom-in">
         <div className="card w-96 glass">
           <figure>
             <img

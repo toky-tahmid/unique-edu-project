@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
             
-<div className="hero min-h-screen" style={{backgroundImage: 'url(https://www.dariah.eu/wp-content/uploads/2018/07/working-group1-1200x565.png)'}}>
+<div className="hero  lg:min-h-screen" style={{backgroundImage: 'url(https://www.dariah.eu/wp-content/uploads/2018/07/working-group1-1200x565.png)'}}>
   <div className="hero-overlay bg-opacity-80"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">

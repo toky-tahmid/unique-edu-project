@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
+import { BsLightbulb } from "react-icons/bs";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
@@ -23,12 +24,12 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/blog"
+          to="/events"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "bg-orange-600 underline" : ""
           }>
           {" "}
-          Blog
+          Events
         </NavLink>
       </li>
       <li>
@@ -54,6 +55,8 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
+<BsLightbulb className="text-xl "></BsLightbulb>
+        <h1 className="text-3xl font-bold">INNOVATIVE</h1>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -83,10 +86,19 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        
         {
-                user ?
-                    <button onClick={handleLogOut} className="btn">Sign Out</button>
+          user &&
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+          <img className="h-10 mr-8" src={user?.photoURL}/>
+          </div>
+        </label>}
+        {
+          user && user.displayName
+        }
+        {
+              user ?
+                <button onClick={handleLogOut} className="btn">Sign Out</button>
                     :
                     <Link to="/login">
           <button className="btn">Login</button>

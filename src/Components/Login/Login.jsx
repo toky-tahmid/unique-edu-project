@@ -49,32 +49,32 @@ const Login = () => {
             <form onSubmit={handleLogIn}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text font-semibold text-xl">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   required
                   className="input input-bordered"
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text font-semibold text-xl">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   required
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                 />
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
-              {error && <p className="text-red-500 mt-2">{error}</p>} 
+              {error && <p className="text-red-700 mt-2">{error}</p>} 
             </form>
             <p>
               Don't Have An Account
@@ -82,7 +82,7 @@ const Login = () => {
                 <button className="btn btn-link">Register</button>
               </Link>
               <p>
-                <button onClick={handleGoogleSignIn} className="btn btn-secondary ml-20">
+                <button onClick={handleGoogleSignIn} className="btn btn-primary ml-20">
                   Google
                 </button>
               </p>
